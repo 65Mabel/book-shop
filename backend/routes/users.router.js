@@ -9,12 +9,12 @@ const {
 } = require("../controllers/users.controller");
 
 // get all users
-router.get("/users", checkAuth, getAllUsers);
+router.get("/", checkAuth, getAllUsers);
 
 // get user by id
-router.get("/users/:id", checkAuth, getUser);
+router.get("/:id", checkAuth, getUser);
 
 // add new user
-router.post("/users", timeStamp, createUser);
+router.post("/", timeStamp, createUser);
 
 module.exports = router;
